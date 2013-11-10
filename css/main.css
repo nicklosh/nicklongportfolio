@@ -1,0 +1,246 @@
+/*global*/
+html {
+  background-color: #5b74a7; }
+
+body, a {
+  color: #eaeaea;
+  font-family: "HelveticaNeue-ultraLight", "Helvetica Neue UltraLight", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  font-smooth: always;
+  -webkit-font-smoothing: subpixel-antialiased; }
+
+a {
+  text-decoration: none; }
+
+p a {
+  border-bottom: 1px solid; }
+
+h1, h2, h3 {
+  font-weight: 100;
+  margin: 0; }
+
+.externalLink {
+  -moz-transition: background 0.3s, -moz-transform 0.3s;
+  -webkit-transition: background 0.3s, -webkit-transform 0.3s;
+  -o-transition: background 0.3s, -o-transform 0.3s;
+  transition: background 0.3s, transform 0.3s;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0.2); }
+  .externalLink a {
+    display: block;
+    padding: 10px;
+    border-bottom: none; }
+  .externalLink:hover {
+    background: rgba(0, 0, 0, 0.4); }
+
+#error {
+  font-size: 2em;
+  text-shadow: 1px 1px 1px #3f5176; }
+
+nav {
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #828282;
+  opacity: .9;
+  width: 100%; }
+  nav:hover {
+    opacity: 1; }
+  nav ul {
+    padding: 0;
+    margin: 0; }
+    nav ul li {
+      display: inline; }
+      nav ul li#NL {
+        display: none; }
+      nav ul li a {
+        display: inline-block;
+        padding: 10px; }
+        nav ul li a:hover {
+          background: #b2b2b2; }
+      nav ul li span {
+        /*hide at small screen*/
+        display: none; }
+      nav ul li ul {
+        display: none; }
+        nav ul li ul li {
+          display: block; }
+        nav ul li ul.active {
+          display: inline-block;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          padding: 0; }
+          nav ul li ul.active li {
+            display: block;
+            background: #828282;
+            width: 100%;
+            margin: 1px 0; }
+            nav ul li ul.active li a {
+              display: block;
+              padding: 5px 35px; }
+            nav ul li ul.active li:hover {
+              background: #b2b2b2; }
+      nav ul li#contact {
+        float: right; }
+
+/*sections*/
+/*all sections*/
+.screen {
+  position: relative; }
+  .screen .content {
+    padding: 50px 10px 20px;
+    /*		max-width: 400px;
+    		height: 300px;
+    		margin: auto;
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		bottom: 0;
+    		right: 0;*/ }
+  .screen#aboutme {
+    z-index: 300;
+    background: #5b74a7; }
+    .screen#aboutme .content {
+      padding-top: 20px; }
+      .screen#aboutme .content h1 {
+        position: relative; }
+        .screen#aboutme .content h1 small {
+          font-size: 45%;
+          position: absolute;
+          top: -10px;
+          left: 80px; }
+  .screen#peanuts {
+    background: #6b824d; }
+  .screen#results {
+    background: #667b86; }
+  .screen#nicklosh {
+    background: #282828; }
+  .screen#ameb {
+    background: #6b824d; }
+  .screen#syllabus {
+    background: #667b86; }
+  .screen#builder {
+    background: #282828; }
+
+.contactList {
+  list-style-type: none;
+  padding: 0;
+  font-size: .8em; }
+  .contactList li {
+    display: inline;
+    margin-right: 5px; }
+    .contactList li a:hover {
+      border-bottom: 1px solid; }
+
+#examples {
+  background: #7c90b9;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  -moz-transition: background 0.3s, -moz-transform 0.3s;
+  -webkit-transition: background 0.3s, -webkit-transform 0.3s;
+  -o-transition: background 0.3s, -o-transform 0.3s;
+  transition: background 0.3s, transform 0.3s; }
+  #examples a {
+    display: block;
+    padding: 10px 0; }
+  #examples h2 {
+    font-size: 1.2em; }
+  #examples i {
+    font-size: 2em;
+    vertical-align: middle;
+    line-height: 0;
+    margin-top: -5px; }
+  #examples:hover {
+    background: #9daccb; }
+
+/*images*/
+.image {
+  max-width: 275px;
+  display: none; }
+  .image.active {
+    display: block; }
+  .image span {
+    display: inline-block;
+    width: 100%;
+    background-size: 100%; }
+    .image span span {
+      display: block;
+      height: 0;
+      padding-top: 72.7%; }
+
+#peanutsImg {
+  background-image: url("/img/screenshots-sml/peanuts-sml.png"); }
+
+#resultsImg1 {
+  background-image: url("/img/screenshots-sml/results-hub--sml.png"); }
+
+#resultsImg2 {
+  background-image: url("/img/screenshots-sml/results-hub-detail-sml.png"); }
+
+#resultsImg3 {
+  background-image: url("/img/screenshots-sml/results-student-detail-sml.png"); }
+
+#nickloshImg1 {
+  background-image: url("/img/screenshots-sml/nicklosh-home-sml.png"); }
+
+#nickloshImg2 {
+  background-image: url("/img/screenshots-sml/nicklosh-music-sml.png"); }
+
+#nickloshImg3 {
+  background-image: url("/img/screenshots-sml/nicklosh-videos-sml.png"); }
+
+#amebImg1 {
+  background-image: url("/img/screenshots-sml/ameb-candiates-sml.png"); }
+
+#amebImg2 {
+  background-image: url("/img/screenshots-sml/ameb-detail-sml.png"); }
+
+#amebImg3 {
+  background-image: url("/img/screenshots-sml/ameb-ipad-sml.png"); }
+
+#syllabusImg1 {
+  background-image: url("/img/screenshots-sml/syllabus-home-sml.png"); }
+
+#syllabusImg2 {
+  background-image: url("/img/screenshots-sml/syllabus-math-detail-sml.png"); }
+
+#syllabusImg3 {
+  background-image: url("/img/screenshots-sml/syllabus-filter-sml.png"); }
+
+#builderImg1 {
+  background-image: url("/img/screenshots-sml/pb-home-sml.png"); }
+
+#builderImg2 {
+  background-image: url("/img/screenshots-sml/pb-unit-sml.png"); }
+
+#builderImg3 {
+  background-image: url("/img/screenshots-sml/pb-userhelp-sml.png"); }
+
+.controls {
+  max-width: 275px; }
+  .controls a {
+    opacity: .3;
+    -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    -o-transition: opacity 0.3s, -o-transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s; }
+    .controls a:hover {
+      opacity: 1; }
+  .controls .prev {
+    float: left;
+    font-size: 2em; }
+  .controls .next {
+    float: right;
+    font-size: 2em; }
+  .controls .switchDisplay {
+    margin-left: 43%;
+    padding-top: 12px;
+    font-size: .8em; }

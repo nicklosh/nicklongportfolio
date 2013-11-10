@@ -1,0 +1,284 @@
+@import "_colours.scss";
+@import "_mixin.scss";
+
+/*global*/
+html{
+	background-color: $blue;
+}
+
+body, a {
+   @include bodytext;
+}
+
+a{
+	text-decoration: none;
+}
+p {
+	a{border-bottom: 1px solid;}
+}
+
+h1, h2, h3{font-weight: 100; margin: 0;}
+
+.externalLink{
+	@include transition(background);	
+	display: inline-block;
+	background: $shadowLight;
+	a{
+		display: block;
+		padding: 10px;
+		border-bottom: none;
+	}
+	&:hover{
+		background: $shadowDark;
+	}
+}
+
+#error{
+	font-size: 2em;
+	@include textshadow($blueshadow);
+
+}
+
+nav{
+	-webkit-transform: translateZ(0);
+	-webkit-backface-visibility: hidden;
+	z-index: 200;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: $midgray;
+	opacity: .9;
+	width: 100%;
+	&:hover{
+		opacity:1;
+	}
+	ul{
+		padding:0 ;
+		margin:0;
+		li{
+			&#NL{display: none;}
+			display: inline;
+			a{display: inline-block;
+				padding: 10px;
+				&:hover{
+					background: $lightgray;
+				}
+			}
+			span{ /*hide at small screen*/
+				display:none;
+			}
+			ul {
+				display: none;
+
+				li {
+					display: block;
+				}
+				&.active{
+					display: inline-block;
+					position: absolute;
+					top: 100%;
+					left: 0;
+					width: 100%;
+					padding: 0;
+					li{
+						display: block;
+						background: $midgray;
+						width: 100%;
+						margin: 1px 0;
+						a{
+							display: block;
+							padding: 5px 35px;
+						}
+						&:hover{
+							background: $lightgray;
+
+						}
+					}
+				}
+			}
+			&#contact{
+				float: right;
+			}
+		}
+	}
+}
+
+/*sections*/
+/*all sections*/
+.screen{
+	position: relative;
+	.content{
+		padding: 50px 10px 20px;
+/*		max-width: 400px;
+		height: 300px;
+		margin: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;*/
+	}
+	&#aboutme{
+		z-index: 300;
+		background: $blue;
+		.content{
+			padding-top: 20px;
+			h1{
+				position: relative; 
+				 small{
+					font-size: 45%;
+					position: absolute;
+					top: -10px;
+					left: 80px;
+				}
+			}
+
+		}
+	}
+	&#peanuts{
+	background: $green;
+	}
+	&#results{
+		background: $aqua;
+	}
+	&#nicklosh{
+		background: $black;
+	}
+	&#ameb{
+	background: $green;
+	}
+	&#syllabus{
+		background: $aqua;
+	}
+	&#builder{
+		background: $black;
+	}
+}
+.contactList{
+	list-style-type: none;
+	padding: 0;
+	font-size: .8em;
+	li{
+		display: inline;
+		margin-right: 5px;
+		a:hover{
+			border-bottom:1px solid;
+		}
+	}
+}
+#examples{
+	background: $bluelight;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding: 0;
+	@include transition(background);
+	a{
+		display: block;
+		padding: 10px 0;
+	}
+	h2{
+		font-size: 1.2em;
+	}
+	i{
+		font-size: 2em;
+		vertical-align: middle;
+		line-height: 0;
+		margin-top: -5px;
+	}
+	&:hover{
+		background: $bluelighter;
+	}
+}
+
+/*images*/
+.image{
+	max-width: 275px;
+	display: none;
+	&.active{display: block;}
+	span{
+		display: inline-block;
+		width: 100%;
+		background-size: 100%;
+		span{
+			display: block;
+			height: 0;
+			padding-top: 72.7%;
+		}
+	}
+}
+
+#peanutsImg{
+	background-image: url("/img/screenshots-sml/peanuts-sml.png");
+}
+#resultsImg1{
+	background-image: url("/img/screenshots-sml/results-hub--sml.png");
+}
+#resultsImg2{
+	background-image: url("/img/screenshots-sml/results-hub-detail-sml.png");
+}
+#resultsImg3{
+	background-image: url("/img/screenshots-sml/results-student-detail-sml.png");
+}
+#nickloshImg1{
+	background-image: url("/img/screenshots-sml/nicklosh-home-sml.png");
+}
+#nickloshImg2{
+	background-image: url("/img/screenshots-sml/nicklosh-music-sml.png");
+}
+#nickloshImg3{
+	background-image: url("/img/screenshots-sml/nicklosh-videos-sml.png");
+}
+#amebImg1{
+	background-image: url("/img/screenshots-sml/ameb-candiates-sml.png");
+}
+#amebImg2{
+	background-image: url("/img/screenshots-sml/ameb-detail-sml.png");
+}
+#amebImg3{
+	background-image: url("/img/screenshots-sml/ameb-ipad-sml.png");
+}
+#syllabusImg1{
+	background-image: url("/img/screenshots-sml/syllabus-home-sml.png");
+}
+#syllabusImg2{
+	background-image: url("/img/screenshots-sml/syllabus-math-detail-sml.png");
+}
+#syllabusImg3{
+	background-image: url("/img/screenshots-sml/syllabus-filter-sml.png");
+}
+#builderImg1{
+	background-image: url("/img/screenshots-sml/pb-home-sml.png");
+}
+#builderImg2{
+	background-image: url("/img/screenshots-sml/pb-unit-sml.png");
+}
+#builderImg3{
+	background-image: url("/img/screenshots-sml/pb-userhelp-sml.png");
+}
+
+.controls{
+	max-width: 275px;
+	a{
+		opacity: .3;
+		@include transition(opacity);
+		&:hover{
+			opacity:1;
+		}
+	}
+	.prev{
+		float: left;
+		font-size: 2em;
+	}
+	.next{
+		float: right;
+		font-size: 2em;
+	}
+	.switchDisplay{
+		margin-left: 43%;
+		padding-top: 12px;
+		font-size: .8em;
+	}
+
+}
