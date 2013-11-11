@@ -74,11 +74,18 @@ nav{
 		margin:0;
 		li{
 			&#NL{
-				display: none;
+				float: left;
+				i{
+					width: 19px;
+					text-align: center;
+				}
+				
 			}
 			&#navList{
 				display: block;
+				margin-left: 40px;
 				margin-right: 37px;
+
 			}
 			&#contact{
 				position: absolute;
@@ -98,12 +105,13 @@ nav{
 				display:none;
 			}
 			ul {
-				display: none;
-
+				opacity: .5;
+				@include transition(opacity);
 				li {
 					display: block;
 				}
 				&.active{
+					opacity: 1;
 					display: inline-block;
 					position: absolute;
 					top: 100%;

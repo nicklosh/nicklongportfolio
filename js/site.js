@@ -30,6 +30,20 @@ $(document).ready(function(){
 		$("#navList ul").toggleClass("active");
 	});
 
+// nav scrolling
+	$('a[href^="#"]').on('click',function(event) {
+	    event.preventDefault();
+	    var target = this.hash,
+	    $target = $(target);
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 1500, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	    // close navList
+		$("#navList ul").removeClass("active");
+	});
+
 // image switcher
 	
 	// controls
