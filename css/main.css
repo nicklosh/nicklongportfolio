@@ -44,7 +44,7 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  background: #828282;
+  /*background: $midgray;*/
   opacity: .9;
   width: 100%; }
   nav:hover {
@@ -58,7 +58,8 @@ nav {
         display: none; }
       nav ul li a {
         display: inline-block;
-        padding: 10px; }
+        padding: 10px;
+        background: #828282; }
         nav ul li a:hover {
           background: #b2b2b2; }
       nav ul li span {
@@ -121,11 +122,17 @@ nav {
   .screen#nicklosh {
     background: #282828; }
   .screen#ameb {
-    background: #6b824d; }
+    background: #655a78; }
   .screen#syllabus {
-    background: #667b86; }
+    background: #8c5463; }
   .screen#builder {
-    background: #282828; }
+    background: #b34d4d; }
+
+footer {
+  background: #282828;
+  padding: 10px; }
+  footer p {
+    text-align: center; }
 
 .contactList {
   list-style-type: none;

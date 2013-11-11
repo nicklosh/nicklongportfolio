@@ -46,7 +46,7 @@ nav{
 	position: fixed;
 	top: 0;
 	left: 0;
-	background: $midgray;
+	/*background: $midgray;*/
 	opacity: .9;
 	width: 100%;
 	&:hover{
@@ -60,6 +60,7 @@ nav{
 			display: inline;
 			a{display: inline-block;
 				padding: 10px;
+				background: $midgray;
 				&:hover{
 					background: $lightgray;
 				}
@@ -145,14 +146,22 @@ nav{
 		background: $black;
 	}
 	&#ameb{
-	background: $green;
+	background: $purple;
 	}
 	&#syllabus{
-		background: $aqua;
+		background: $maroon;
 	}
 	&#builder{
-		background: $black;
+		background: $red;
 	}
+}
+footer{
+	background: $black;
+	padding: 10px;
+	p{
+		text-align: center;
+	}
+
 }
 .contactList{
 	list-style-type: none;
