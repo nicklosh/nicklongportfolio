@@ -2,99 +2,113 @@
 html {
   background-color: #5b74a7; }
 
-body, a {
+body, a, button {
   color: #eaeaea;
   font-family: "HelveticaNeue-ultraLight", "Helvetica Neue UltraLight", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 100;
-  font-smooth: always;
-  -webkit-font-smoothing: subpixel-antialiased; }
+  font-weight: 100; }
 
 a {
   text-decoration: none; }
 
 p a {
+  -moz-transition: background 0.3s, -moz-transform 0.3s;
+  -webkit-transition: background 0.3s, -webkit-transform 0.3s;
+  -o-transition: background 0.3s, -o-transform 0.3s;
+  transition: background 0.3s, transform 0.3s;
   border-bottom: 1px solid; }
+  p a:hover, p a:focus {
+    background: rgba(0, 0, 0, 0.4); }
 
 h1, h2, h3 {
   font-weight: 100;
   margin: 0; }
 
 .externalLink {
-  -moz-transition: background 0.3s, -moz-transform 0.3s;
-  -webkit-transition: background 0.3s, -webkit-transform 0.3s;
-  -o-transition: background 0.3s, -o-transform 0.3s;
-  transition: background 0.3s, transform 0.3s;
   display: inline-block;
   background: rgba(0, 0, 0, 0.2); }
   .externalLink a {
     display: block;
     padding: 10px;
     border-bottom: none; }
-  .externalLink:hover {
-    background: rgba(0, 0, 0, 0.4); }
+
+/*in about me splash*/
+.contactList {
+  list-style-type: none;
+  padding: 0;
+  font-size: .8em; }
+  .contactList li {
+    display: inline;
+    margin-right: 5px; }
+    .contactList li a:hover, .contactList li a:focus {
+      border-bottom: 1px solid; }
 
 #error {
   font-size: 2em;
   text-shadow: 1px 1px 1px #3f5176; }
 
 nav {
-  -webkit-transform: translateZ(0);
-  -webkit-backface-visibility: hidden;
-  z-index: 200;
+  z-index: 300;
   position: fixed;
   top: 0;
   left: 0;
-  /*background: $midgray;*/
   opacity: .9;
   width: 100%; }
-  nav:hover {
+  nav:hover, nav:focus {
     opacity: 1; }
   nav ul {
     padding: 0;
     margin: 0; }
-    nav ul li {
-      display: inline; }
-      nav ul li#NL {
-        display: none; }
-      nav ul li a {
+    nav ul li#NL {
+      display: none; }
+    nav ul li#navList {
+      display: block;
+      margin-right: 37px; }
+    nav ul li#contact {
+      position: absolute;
+      top: 0;
+      right: 0; }
+    nav ul li a {
+      -moz-transition: background 0.3s, -moz-transform 0.3s;
+      -webkit-transition: background 0.3s, -webkit-transform 0.3s;
+      -o-transition: background 0.3s, -o-transform 0.3s;
+      transition: background 0.3s, transform 0.3s;
+      display: block;
+      padding: 10px;
+      background: #828282; }
+      nav ul li a:hover, nav ul li a:focus {
+        background: #b2b2b2; }
+    nav ul li span {
+      /*hide at small screen*/
+      display: none; }
+    nav ul li ul {
+      display: none; }
+      nav ul li ul li {
+        display: block; }
+      nav ul li ul.active {
         display: inline-block;
-        padding: 10px;
-        background: #828282; }
-        nav ul li a:hover {
-          background: #b2b2b2; }
-      nav ul li span {
-        /*hide at small screen*/
-        display: none; }
-      nav ul li ul {
-        display: none; }
-        nav ul li ul li {
-          display: block; }
-        nav ul li ul.active {
-          display: inline-block;
-          position: absolute;
-          top: 100%;
-          left: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 0; }
+        nav ul li ul.active li {
+          display: block;
+          background: #828282;
           width: 100%;
-          padding: 0; }
-          nav ul li ul.active li {
+          margin: 1px 0; }
+          nav ul li ul.active li a {
             display: block;
-            background: #828282;
-            width: 100%;
-            margin: 1px 0; }
-            nav ul li ul.active li a {
-              display: block;
-              padding: 5px 35px; }
-            nav ul li ul.active li:hover {
-              background: #b2b2b2; }
-      nav ul li#contact {
-        float: right; }
+            padding: 10px 30px; }
+          nav ul li ul.active li:hover, nav ul li ul.active li:focus {
+            background: #b2b2b2; }
 
 /*sections*/
 /*all sections*/
 .screen {
+  z-index: 200;
   position: relative; }
   .screen .content {
-    padding: 50px 10px 20px;
+    padding: 70px 10px 20px;
     /*		max-width: 400px;
     		height: 300px;
     		margin: auto;
@@ -127,22 +141,41 @@ nav {
     background: #8c5463; }
   .screen#builder {
     background: #b34d4d; }
+  .screen#contentPage .content {
+    padding-top: 20px;
+    margin-bottom: 35px; }
+    .screen#contentPage .content label {
+      display: block;
+      margin-bottom: 5px; }
+    .screen#contentPage .content input {
+      line-height: 1.5em; }
+    .screen#contentPage .content textarea {
+      line-height: 1.5em;
+      /*padding: 5px;*/ }
+      .screen#contentPage .content textarea#comment {
+        width: 100%;
+        min-height: 80px;
+        resize: vertical; }
+    .screen#contentPage .content button {
+      border: none;
+      padding: 10px 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #eaeaea;
+      float: right;
+      -moz-transition: background 0.3s, -moz-transform 0.3s;
+      -webkit-transition: background 0.3s, -webkit-transform 0.3s;
+      -o-transition: background 0.3s, -o-transform 0.3s;
+      transition: background 0.3s, transform 0.3s; }
+      .screen#contentPage .content button:hover, .screen#contentPage .content button:focus {
+        background-color: rgba(0, 0, 0, 0.4); }
 
 footer {
   background: #282828;
   padding: 10px; }
   footer p {
     text-align: center; }
-
-.contactList {
-  list-style-type: none;
-  padding: 0;
-  font-size: .8em; }
-  .contactList li {
-    display: inline;
-    margin-right: 5px; }
-    .contactList li a:hover {
-      border-bottom: 1px solid; }
+    footer p a:hover {
+      background: #828282; }
 
 #examples {
   background: #7c90b9;
@@ -165,7 +198,7 @@ footer {
     vertical-align: middle;
     line-height: 0;
     margin-top: -5px; }
-  #examples:hover {
+  #examples:hover, #examples:focus {
     background: #9daccb; }
 
 /*images*/
@@ -239,7 +272,7 @@ footer {
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
     -o-transition: opacity 0.3s, -o-transform 0.3s;
     transition: opacity 0.3s, transform 0.3s; }
-    .controls a:hover {
+    .controls a:hover, .controls a:focus {
       opacity: 1; }
   .controls .prev {
     float: left;

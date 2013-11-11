@@ -2,8 +2,6 @@
 	color: $white;
 	font-family: "HelveticaNeue-ultraLight", "Helvetica Neue UltraLight", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight: 100;
-	font-smooth: always;
-	-webkit-font-smoothing: subpixel-antialiased;
 }
 @mixin textshadow($textcolor){
 	text-shadow: 1px 1px 1px $textcolor;

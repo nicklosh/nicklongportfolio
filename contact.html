@@ -11,19 +11,16 @@
 	<script src="/js/site.js"></script>
 </head>
 <body>
-	<div class="screen" id="aboutme">
+	<div class="screen" id="contentPage">
 		<div class="content">
+			<h2>Contact me</h2>
 			<form action="process.php" method="post">
-
 			<p><label for="name">Name</label>
-
-			<input name="name" type="text" /></p>
+			<input id="name" name="name" type="text" /></p>
 			<p><label for="email">Email</label>
-			<input name="email" type="text"  /></p>
-
+			<input id="email" name="email" type="text"  /></p>
 			<p><label for="comment">Message</label>
-				<textarea name="comment"></textarea></p>
-
+				<textarea id="comment" name="comment"></textarea></p>
 			<p><button name="submit" type="submit" value="Send">Send</button></p>
 			</form>
 		</div>
