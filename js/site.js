@@ -49,5 +49,11 @@ $(document).ready(function(){
 	// controls
 	$(".controls a").on('click', function(event){
 		event.preventDefault();
+		// find closest imageSwitcher (parent div)
+		// list images
+		// list display
+
+		
+
 	})
 });

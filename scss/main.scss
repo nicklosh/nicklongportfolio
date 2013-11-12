@@ -65,6 +65,7 @@ nav{
 	top: 0;
 	left: 0;
 	opacity: .9;
+	@include transition(opacity);
 	width: 100%;
 	&:hover, &:focus{
 		opacity:1;
@@ -87,7 +88,7 @@ nav{
 				margin-right: 37px;
 				ul {
 					padding: 0;
-					opacity: 0;
+					opacity: 0.5;
 					@include transition(opacity);
 					li{
 						background: $midgray;
@@ -263,6 +264,8 @@ footer{
 }
 
 /*images*/
+.imageSwitcher{
+}
 .image{
 	max-width: 275px;
 	display: none;
@@ -330,11 +333,12 @@ footer{
 
 .controls{
 	max-width: 275px;
-	a{
+	i{
 		opacity: .3;
 		@include transition(opacity);
 		&:hover, &:focus{
 			opacity:1;
+			cursor: pointer;
 		}
 	}
 	.prev{
