@@ -214,17 +214,23 @@ footer {
     background: #9daccb; }
 
 /*images*/
+.imageSwitcher {
+  position: relative; }
+
 .image {
+  /*position: absolute;*/
   max-width: 275px;
   display: none; }
   .image.active {
-    display: block; }
+    display: block;
+    opacity: 0;
+    margin-left: 200px; }
   .image span {
     display: inline-block;
     width: 100%;
     background-size: 100%; }
     .image span span {
-      display: block;
+      display: inline-block;
       height: 0;
       padding-top: 72.7%; }
 
