@@ -339,21 +339,30 @@ footer{
 
 .controls{
 	max-width: 275px;
-	i{
+	i {
 		opacity: .3;
 		@include transition(opacity);
-		&:hover, &:focus{
-			opacity:1;
-			cursor: pointer;
+	}
+	.prev , .next {
+		font-size: 2em;		
+		@include transition(background);
+		&:hover{
+			background:$black;
+		}
+
+		i{
+			padding:0 10px;
+			&:hover, &:focus{
+				opacity:1;
+				cursor: pointer;
+			}			
 		}
 	}
 	.prev{
 		float: left;
-		font-size: 2em;
 	}
 	.next{
 		float: right;
-		font-size: 2em;
 	}
 	.switchDisplay{
 		margin-left: 43%;
