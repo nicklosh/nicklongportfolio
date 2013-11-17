@@ -27,7 +27,7 @@ $(document).ready(function(){
 	    $target = $(target);
 	    $('html, body').stop().animate({
 	        'scrollTop': $target.offset().top
-	    }, 1500, 'swing', function () {
+	    }, 700, 'swing', function () {
 	        window.location.hash = target;
 	    });
 	    // close navList
@@ -37,7 +37,10 @@ $(document).ready(function(){
 // image switcher
 
 	// set active image to display
-	$(".image.active").css({opacity:1, marginLeft:'-=200'});
+	$(".image.active").css({opacity:1});
+
+	// if screen size is greater than blah
+	// $(".image.active").css({opacity:1, marginLeft:'-=200'});
 
 	// list all switchers
 	var swtichContainers = $('.imageSwitcher');
@@ -50,8 +53,48 @@ $(document).ready(function(){
 		switcher(swtichContainers[i]);
 	};
 
-
 	function switcher(switcher){		
+		$(switcher.next).on('click', function(){
+			if($(switcher.images[0]).hasClass("active")){
+					$(switcher.images[0]).animate({opacity:0}, 150, function(){
+						$(this).removeClass('active');
+						$(switcher.images[1]).addClass('active').animate({opacity:1},150);		
+					});
+					$(switcher.displays[0]).removeClass('fa-circle').addClass('fa-circle-o');
+					$(switcher.displays[1]).removeClass('fa-circle-o').addClass('fa-circle');
+				}
+			else if($(switcher.images[1]).hasClass("active")){
+				$(switcher.images[1]).animate({opacity:0}, 150, function(){
+					$(this).removeClass('active');
+					$(switcher.images[2]).addClass('active').animate({opacity:1},150);		
+				});
+				$(switcher.displays[1]).removeClass('fa-circle').addClass('fa-circle-o');
+				$(switcher.displays[2]).removeClass('fa-circle-o').addClass('fa-circle');
+			}
+	
+		});
+	
+		$(switcher.prev).on('click', function(){
+			if($(switcher.images[1]).hasClass("active")){
+				$(switcher.images[1]).animate({opacity:0}, 150, function(){
+					$(this).removeClass('active');
+					$(switcher.images[0]).addClass('active').animate({opacity:1},150);		
+				});
+				$(switcher.displays[0]).removeClass('fa-circle-o').addClass('fa-circle');
+				$(switcher.displays[1]).removeClass('fa-circle').addClass('fa-circle-o');
+			}
+			else if($(switcher.images[2]).hasClass("active")){
+				$(switcher.images[2]).animate({opacity:0}, 150, function(){
+					$(this).removeClass('active');
+					$(switcher.images[1]).addClass('active').animate({opacity:1},150);		
+				});
+				$(switcher.displays[1]).removeClass('fa-circle-o').addClass('fa-circle');
+				$(switcher.displays[2]).removeClass('fa-circle').addClass('fa-circle-o');
+			}
+		});
+	};
+
+	function switcherLarge(switcher){		
 		$(switcher.next).on('click', function(){
 			if($(switcher.images[0]).hasClass("active")){
 					$(switcher.images[0]).animate({opacity:0, marginLeft:'-=200'}, 150, function(){

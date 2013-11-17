@@ -268,18 +268,18 @@ footer{
 	position: relative;
 }
 .image{
-	/*position: absolute;*/
 	max-width: 275px;
 	display: none;
 	&.active{
 		display: block;
 		opacity: 0;
-		margin-left: 200px;
+		/*margin-left: 200px;*/
 	}
 	span{
 		display: inline-block;
 		width: 100%;
 		background-size: 100%;
+		background-repeat: no-repeat;
 		span{
 			display: inline-block;
 			height: 0;
@@ -316,7 +316,7 @@ footer{
 	background-image: url("/img/screenshots-sml/ameb-detail-sml.png");
 }
 #amebImg3{
-	background-image: url("/img/screenshots-sml/ameb-ipad-sml.png");
+	background-image: url("/img/screenshots-sml/ameb-ipad-sml1.png");
 }
 #syllabusImg1{
 	background-image: url("/img/screenshots-sml/syllabus-home-sml.png");
@@ -347,7 +347,7 @@ footer{
 		font-size: 2em;		
 		@include transition(background);
 		&:hover{
-			background:$black;
+			background:$shadowLight;
 		}
 
 		i{

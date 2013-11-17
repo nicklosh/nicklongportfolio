@@ -218,17 +218,17 @@ footer {
   position: relative; }
 
 .image {
-  /*position: absolute;*/
   max-width: 275px;
   display: none; }
   .image.active {
     display: block;
     opacity: 0;
-    margin-left: 200px; }
+    /*margin-left: 200px;*/ }
   .image span {
     display: inline-block;
     width: 100%;
-    background-size: 100%; }
+    background-size: 100%;
+    background-repeat: no-repeat; }
     .image span span {
       display: inline-block;
       height: 0;
@@ -262,7 +262,7 @@ footer {
   background-image: url("/img/screenshots-sml/ameb-detail-sml.png"); }
 
 #amebImg3 {
-  background-image: url("/img/screenshots-sml/ameb-ipad-sml.png"); }
+  background-image: url("/img/screenshots-sml/ameb-ipad-sml1.png"); }
 
 #syllabusImg1 {
   background-image: url("/img/screenshots-sml/syllabus-home-sml.png"); }
@@ -297,7 +297,7 @@ footer {
     -o-transition: background 0.3s, -o-transform 0.3s;
     transition: background 0.3s, transform 0.3s; }
     .controls .prev:hover, .controls .next:hover {
-      background: #282828; }
+      background: rgba(0, 0, 0, 0.2); }
     .controls .prev i, .controls .next i {
       padding: 0 10px; }
       .controls .prev i:hover, .controls .prev i:focus, .controls .next i:hover, .controls .next i:focus {
