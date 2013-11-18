@@ -222,8 +222,7 @@ footer {
   display: none; }
   .image.active {
     display: block;
-    opacity: 0;
-    /*margin-left: 200px;*/ }
+    opacity: 0; }
   .image span {
     display: inline-block;
     width: 100%;

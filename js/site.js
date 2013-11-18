@@ -39,8 +39,6 @@ $(document).ready(function(){
 	// set active image to display
 	$(".image.active").css({opacity:1});
 
-	// if screen size is greater than blah
-	// $(".image.active").css({opacity:1, marginLeft:'-=200'});
 
 	// list all switchers
 	var swtichContainers = $('.imageSwitcher');
@@ -50,7 +48,15 @@ $(document).ready(function(){
 		swtichContainers[i].displays = $(swtichContainers[i]).find(".switchDisplay i");
 		swtichContainers[i].next = $(swtichContainers[i]).find(".next");
 		swtichContainers[i].prev = $(swtichContainers[i]).find(".prev");
-		switcher(swtichContainers[i]);
+		
+		if($(window).width() < 530){
+		// small screen
+			switcher(swtichContainers[i]);		
+		}
+		else{
+		// at large size
+			switcherSlide(swtichContainers[i]);
+		}
 	};
 
 	function switcher(switcher){		
@@ -71,7 +77,14 @@ $(document).ready(function(){
 				$(switcher.displays[1]).removeClass('fa-circle').addClass('fa-circle-o');
 				$(switcher.displays[2]).removeClass('fa-circle-o').addClass('fa-circle');
 			}
-	
+			else if($(switcher.images[2]).hasClass("active")){
+				$(switcher.images[2]).animate({opacity:0}, 150, function(){
+					$(this).removeClass('active');
+					$(switcher.images[0]).addClass('active').animate({opacity:1},150);		
+				});
+				$(switcher.displays[2]).removeClass('fa-circle').addClass('fa-circle-o');
+				$(switcher.displays[0]).removeClass('fa-circle-o').addClass('fa-circle');
+			}
 		});
 	
 		$(switcher.prev).on('click', function(){
@@ -91,46 +104,76 @@ $(document).ready(function(){
 				$(switcher.displays[1]).removeClass('fa-circle-o').addClass('fa-circle');
 				$(switcher.displays[2]).removeClass('fa-circle').addClass('fa-circle-o');
 			}
+			else if($(switcher.images[0]).hasClass("active")){
+				$(switcher.images[0]).animate({opacity:0}, 150, function(){
+					$(this).removeClass('active');
+					$(switcher.images[2]).addClass('active').animate({opacity:1},150);		
+				});
+				$(switcher.displays[2]).removeClass('fa-circle-o').addClass('fa-circle');
+				$(switcher.displays[0]).removeClass('fa-circle').addClass('fa-circle-o');
+			}
 		});
 	};
 
-	function switcherLarge(switcher){		
+	function switcherSlide(switcher){		
 		$(switcher.next).on('click', function(){
 			if($(switcher.images[0]).hasClass("active")){
+					$(switcher.images[1]).css({'margin-left':"200px"})	
 					$(switcher.images[0]).animate({opacity:0, marginLeft:'-=200'}, 150, function(){
 						$(this).removeClass('active');
-						$(switcher.images[1]).addClass('active').animate({opacity:1, marginLeft:'-=200'},150);		
+						$(switcher.images[1]).addClass('active').animate({opacity:1, marginLeft:'0'},150);		
 					});
 					$(switcher.displays[0]).removeClass('fa-circle').addClass('fa-circle-o');
 					$(switcher.displays[1]).removeClass('fa-circle-o').addClass('fa-circle');
 				}
 			else if($(switcher.images[1]).hasClass("active")){
-				$(switcher.images[1]).animate({opacity:0, marginLeft:'-=200'}, 150, function(){
+				$(switcher.images[2]).css({'margin-left':"200px"})	
+				$(switcher.images[1]).animate({opacity:0, marginLeft:'-200'}, 150, function(){
 					$(this).removeClass('active');
-					$(switcher.images[2]).addClass('active').animate({opacity:1, marginLeft:'-=200'},150);		
+					$(switcher.images[2]).addClass('active').animate({opacity:1, marginLeft:'0'},150);		
 				});
 				$(switcher.displays[1]).removeClass('fa-circle').addClass('fa-circle-o');
 				$(switcher.displays[2]).removeClass('fa-circle-o').addClass('fa-circle');
+			}
+			else if($(switcher.images[2]).hasClass("active")){
+				$(switcher.images[0]).css({'margin-left':"200px"})				
+				$(switcher.images[2]).animate({opacity:0, marginLeft:'-200'}, 150, function(){
+					$(this).removeClass('active');
+					$(switcher.images[0]).addClass('active').animate({opacity:1, marginLeft:'0'},150);		
+				});
+				$(switcher.displays[2]).removeClass('fa-circle').addClass('fa-circle-o');
+				$(switcher.displays[0]).removeClass('fa-circle-o').addClass('fa-circle');
 			}
 	
 		});
 	
 		$(switcher.prev).on('click', function(){
 			if($(switcher.images[1]).hasClass("active")){
+				$(switcher.images[0]).css({'margin-left':"-200px"})
 				$(switcher.images[1]).animate({opacity:0, marginLeft:'+=200'}, 150, function(){
 					$(this).removeClass('active');
-					$(switcher.images[0]).addClass('active').animate({opacity:1, marginLeft:'+=200'},150);		
+					$(switcher.images[0]).addClass('active').animate({opacity:1, marginLeft:'0'},150);		
 				});
 				$(switcher.displays[0]).removeClass('fa-circle-o').addClass('fa-circle');
 				$(switcher.displays[1]).removeClass('fa-circle').addClass('fa-circle-o');
 			}
 			else if($(switcher.images[2]).hasClass("active")){
+				$(switcher.images[1]).css({'margin-left':"-200px"})
 				$(switcher.images[2]).animate({opacity:0, marginLeft:'+=200'}, 150, function(){
 					$(this).removeClass('active');
-					$(switcher.images[1]).addClass('active').animate({opacity:1, marginLeft:'+=200'},150);		
+					$(switcher.images[1]).addClass('active').animate({opacity:1, marginLeft:'0'},150);		
 				});
 				$(switcher.displays[1]).removeClass('fa-circle-o').addClass('fa-circle');
 				$(switcher.displays[2]).removeClass('fa-circle').addClass('fa-circle-o');
+			}
+			else if($(switcher.images[0]).hasClass("active")){
+				$(switcher.images[2]).css({'margin-left':"-200px"})
+				$(switcher.images[0]).animate({opacity:0, marginLeft:'+=200'}, 150, function(){
+					$(this).removeClass('active');
+					$(switcher.images[2]).addClass('active').animate({opacity:1, marginLeft:'0'},150);		
+				});
+				$(switcher.displays[2]).removeClass('fa-circle-o').addClass('fa-circle');
+				$(switcher.displays[0]).removeClass('fa-circle').addClass('fa-circle-o');
 			}
 		});
 	};
