@@ -120,15 +120,7 @@ nav {
   z-index: 200;
   position: relative; }
   .screen .content {
-    padding: 70px 10px 20px;
-    /*		max-width: 400px;
-    		height: 300px;
-    		margin: auto;
-    		position: absolute;
-    		top: 0;
-    		left: 0;
-    		bottom: 0;
-    		right: 0;*/ }
+    padding: 70px 10px 20px; }
   .screen#aboutme {
     z-index: 300;
     background: #5b74a7; }
@@ -310,3 +302,88 @@ footer {
     margin-left: 43%;
     padding-top: 12px;
     font-size: .8em; }
+
+@media screen and (min-width: 320px) {
+  .image {
+    max-width: 550px;
+    display: none; }
+    .image.active {
+      display: block;
+      opacity: 0; }
+    .image span {
+      display: inline-block;
+      width: 100%;
+      background-size: 100%;
+      background-repeat: no-repeat; }
+      .image span span {
+        display: inline-block;
+        height: 0;
+        padding-top: 72.7%; }
+
+  #peanutsImg {
+    background-image: url("/img/screenshots/peanuts.png"); }
+
+  #resultsImg1 {
+    background-image: url("/img/screenshots/results-hub.png"); }
+
+  #resultsImg2 {
+    background-image: url("/img/screenshots/results-hub-detail.png"); }
+
+  #resultsImg3 {
+    background-image: url("/img/screenshots/results-student-detail.png"); }
+
+  #nickloshImg1 {
+    background-image: url("/img/screenshots/nicklosh-home.png"); }
+
+  #nickloshImg2 {
+    background-image: url("/img/screenshots/nicklosh-music.png"); }
+
+  #nickloshImg3 {
+    background-image: url("/img/screenshots/nicklosh-videos.png"); }
+
+  #amebImg1 {
+    background-image: url("/img/screenshots/ameb-candiates.png"); }
+
+  #amebImg2 {
+    background-image: url("/img/screenshots/ameb-detail.png"); }
+
+  #amebImg3 {
+    background-image: url("/img/screenshots/ameb-ipad.png"); }
+
+  #syllabusImg1 {
+    background-image: url("/img/screenshots/syllabus-home.png"); }
+
+  #syllabusImg2 {
+    background-image: url("/img/screenshots/syllabus-math-detail.png"); }
+
+  #syllabusImg3 {
+    background-image: url("/img/screenshots/syllabus-filter.png"); }
+
+  #builderImg1 {
+    background-image: url("/img/screenshots/pb-home.png"); }
+
+  #builderImg2 {
+    background-image: url("/img/screenshots/pb-unit.png"); }
+
+  #builderImg3 {
+    background-image: url("/img/screenshots/pb-userhelp.png"); }
+
+  .controls {
+    max-width: 550px; } }
+@media screen and (min-width: 550px) {
+  .screen#aboutme {
+    position: relative; }
+    .screen#aboutme .content {
+      max-width: 80%;
+      height: 300px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; } }
+@media screen and (min-width: 630px) {
+  .screen#aboutme .content {
+    max-width: 40%;
+    background: url("/img/profile.jpg") no-repeat right;
+    padding-right: 220px; } }
