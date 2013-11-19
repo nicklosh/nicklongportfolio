@@ -368,6 +368,17 @@ footer {
   #builderImg3 {
     background-image: url("/img/screenshots/pb-userhelp.png"); }
 
+  .imageSwitcher {
+    margin: 0 40px; }
+    .imageSwitcher .controls .prev {
+      position: absolute;
+      top: 50%;
+      left: -40px; }
+    .imageSwitcher .controls .next {
+      position: absolute;
+      top: 50%;
+      right: -40px; }
+
   .controls {
     max-width: 550px; } }
 @media screen and (min-width: 550px) {

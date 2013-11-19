@@ -433,6 +433,22 @@ footer{
 	#builderImg3{
 		background-image: url("/img/screenshots/pb-userhelp.png");
 	}
+		.imageSwitcher{
+		margin: 0 40px;
+		.controls{
+			.prev{
+				position: absolute;
+				top:50%;
+				left: -40px;
+			}
+			.next{
+				position: absolute;
+				top:50%;	
+				right: -40px;
+			}
+		}
+	}
+
 	.controls{
 	max-width: 550px;
 	}
@@ -453,6 +469,7 @@ footer{
 		right: 0;
 		}
 	}	
+
 
 }
 @media screen and (min-width: 630px){
