@@ -118,9 +118,14 @@ nav {
 /*all sections*/
 .screen {
   z-index: 200;
-  position: relative; }
+  position: relative;
+  clear: both; }
   .screen .content {
-    padding: 70px 10px 20px; }
+    padding: 70px 10px 20px;
+    max-width: 1400px;
+    margin: 0 auto; }
+    .screen .content > br {
+      clear: both; }
   .screen#aboutme {
     z-index: 300;
     background: #5b74a7; }
@@ -207,7 +212,8 @@ footer {
 
 /*images*/
 .imageSwitcher {
-  position: relative; }
+  position: relative;
+  max-width: 550px; }
 
 .image {
   max-width: 275px;
@@ -392,9 +398,21 @@ footer {
       top: 0;
       left: 0;
       bottom: 0;
-      right: 0; } }
+      right: 0; }
+
+  .text {
+    float: right;
+    width: 45%; }
+
+  .imageSwitcher {
+    width: 40%; }
+
+  /*2 cols*/ }
 @media screen and (min-width: 630px) {
   .screen#aboutme .content {
     max-width: 40%;
     background: url("/img/profile.jpg") no-repeat right;
     padding-right: 220px; } }
+@media screen and (min-width: 850px) {
+  .text {
+    width: 50%; } }

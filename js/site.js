@@ -49,14 +49,17 @@ $(document).ready(function(){
 		swtichContainers[i].next = $(swtichContainers[i]).find(".next");
 		swtichContainers[i].prev = $(swtichContainers[i]).find(".prev");
 		
-		if($(window).width() < 530){
-		// small screen
-			switcher(swtichContainers[i]);		
-		}
-		else{
-		// at large size
-			switcherSlide(swtichContainers[i]);
-		}
+		switcher(swtichContainers[i]);		
+
+		
+		// if($(window).width() < 530){
+		// // small screen
+		// 	switcher(swtichContainers[i]);		
+		// }
+		// else{
+		// // at large size
+		// 	switcherSlide(swtichContainers[i]);
+		// }
 	};
 
 	function switcher(switcher){		

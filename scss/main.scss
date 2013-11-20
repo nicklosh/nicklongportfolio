@@ -141,8 +141,14 @@ nav{
 .screen{
 	z-index: 200;
 	position: relative;
+	clear: both;
 	.content{
 		padding: 70px 10px 20px;
+		max-width: 1400px;
+		margin: 0 auto;
+		> br{
+			clear: both;
+		}
 	}
 	&#aboutme{
 		z-index: 300;
@@ -258,6 +264,7 @@ footer{
 /*images*/
 .imageSwitcher{
 	position: relative;
+	max-width: 550px;
 }
 .image{
 	max-width: 275px;
@@ -469,6 +476,15 @@ footer{
 		right: 0;
 		}
 	}	
+	.text{
+		float: right;
+		width: 45%;
+	}
+	.imageSwitcher{
+		width: 40%;
+	}
+
+	/*2 cols*/
 
 
 }
@@ -483,3 +499,8 @@ footer{
 	}
 }
 
+@media screen and (min-width: 850px){
+	.text{
+		width: 50%;
+	}
+}
