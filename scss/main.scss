@@ -144,7 +144,7 @@ nav{
 	clear: both;
 	.content{
 		padding: 70px 10px 20px;
-		max-width: 1400px;
+		max-width: 940px;
 		margin: 0 auto;
 		> br{
 			clear: both;
@@ -259,6 +259,11 @@ footer{
 	&:hover, &:focus{
 		background: $bluelighter;
 	}
+}
+
+.text{
+	max-width: 550px;
+	margin: 0 auto;
 }
 
 /*images*/
@@ -440,7 +445,7 @@ footer{
 	#builderImg3{
 		background-image: url("/img/screenshots/pb-userhelp.png");
 	}
-		.imageSwitcher{
+	.imageSwitcher{
 		margin: 0 40px;
 		.controls{
 			.prev{
@@ -476,15 +481,8 @@ footer{
 		right: 0;
 		}
 	}	
-	.text{
-		float: right;
-		width: 45%;
-	}
-	.imageSwitcher{
-		width: 40%;
-	}
 
-	/*2 cols*/
+
 
 
 }
@@ -498,9 +496,21 @@ footer{
 		}
 	}
 }
-
+@media screen and (min-width: 650px){
+	.imageSwitcher{
+		margin: 0 auto;
+	}
+}
 @media screen and (min-width: 850px){
+	.screen{
+		padding: 100px 0;
+	}
 	.text{
-		width: 50%;
+		float: right;
+		width: 30%;
+	}
+		.imageSwitcher{
+		width: 60%;
+		margin: 0 40px;
 	}
 }

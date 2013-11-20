@@ -122,7 +122,7 @@ nav {
   clear: both; }
   .screen .content {
     padding: 70px 10px 20px;
-    max-width: 1400px;
+    max-width: 940px;
     margin: 0 auto; }
     .screen .content > br {
       clear: both; }
@@ -209,6 +209,10 @@ footer {
     margin-top: -5px; }
   #examples:hover, #examples:focus {
     background: #9daccb; }
+
+.text {
+  max-width: 550px;
+  margin: 0 auto; }
 
 /*images*/
 .imageSwitcher {
@@ -398,21 +402,23 @@ footer {
       top: 0;
       left: 0;
       bottom: 0;
-      right: 0; }
-
-  .text {
-    float: right;
-    width: 45%; }
-
-  .imageSwitcher {
-    width: 40%; }
-
-  /*2 cols*/ }
+      right: 0; } }
 @media screen and (min-width: 630px) {
   .screen#aboutme .content {
     max-width: 40%;
     background: url("/img/profile.jpg") no-repeat right;
     padding-right: 220px; } }
+@media screen and (min-width: 650px) {
+  .imageSwitcher {
+    margin: 0 auto; } }
 @media screen and (min-width: 850px) {
+  .screen {
+    padding: 100px 0; }
+
   .text {
-    width: 50%; } }
+    float: right;
+    width: 30%; }
+
+  .imageSwitcher {
+    width: 60%;
+    margin: 0 40px; } }
