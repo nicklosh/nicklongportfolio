@@ -468,6 +468,7 @@ footer{
 }
 
 @media screen and (min-width: 550px){
+
 .screen#aboutme{
 	position: relative;
 	.content{
@@ -479,6 +480,13 @@ footer{
 		left: 0;
 		bottom: 0;
 		right: 0;
+			h1{
+				font-size: 3em;
+				small{
+					font-size: 35%;
+					left: 125px;
+				}
+			}
 		}
 	}	
 
@@ -497,13 +505,34 @@ footer{
 	}
 }
 @media screen and (min-width: 650px){
+	.screen#aboutme{
+		.content{
+			p{
+				font-size: 1.4em;
+			}
+		}
+	}
 	.imageSwitcher{
 		margin: 0 auto;
 	}
 }
+@media screen and (min-width: 700px){
+	.screen#aboutme{
+		.content{
+			p{
+				font-size: 1.4em;
+			}
+			.contactList{
+				font-size: 1em;
+			}
+		}
+	}
+}
 @media screen and (min-width: 850px){
 	.screen{
-		padding: 100px 0;
+		.content{
+		padding: 100px 0 80px;
+	}
 	}
 	.text{
 		float: right;

@@ -402,18 +402,31 @@ footer {
       top: 0;
       left: 0;
       bottom: 0;
-      right: 0; } }
+      right: 0; }
+      .screen#aboutme .content h1 {
+        font-size: 3em; }
+        .screen#aboutme .content h1 small {
+          font-size: 35%;
+          left: 125px; } }
 @media screen and (min-width: 630px) {
   .screen#aboutme .content {
     max-width: 40%;
     background: url("/img/profile.jpg") no-repeat right;
     padding-right: 220px; } }
 @media screen and (min-width: 650px) {
+  .screen#aboutme .content p {
+    font-size: 1.4em; }
+
   .imageSwitcher {
     margin: 0 auto; } }
+@media screen and (min-width: 700px) {
+  .screen#aboutme .content p {
+    font-size: 1.4em; }
+  .screen#aboutme .content .contactList {
+    font-size: 1em; } }
 @media screen and (min-width: 850px) {
-  .screen {
-    padding: 100px 0; }
+  .screen .content {
+    padding: 100px 0 80px; }
 
   .text {
     float: right;
