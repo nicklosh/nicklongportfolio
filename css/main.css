@@ -428,6 +428,15 @@ footer {
   .screen .content {
     padding: 100px 0 80px; }
 
+  .screen#aboutme #examples h2 {
+    font-size: 1.5em; }
+    .screen#aboutme #examples h2 a {
+      padding: 30px 0 50px; }
+      .screen#aboutme #examples h2 a i {
+        position: absolute;
+        bottom: 30px;
+        left: 50%; }
+
   .text {
     float: right;
     width: 30%; }
@@ -435,3 +444,19 @@ footer {
   .imageSwitcher {
     width: 60%;
     margin: 0 40px; } }
+@media screen and (min-width: 950px) {
+  .screen#aboutme .content .contactList {
+    font-size: 1.2em; }
+    .screen#aboutme .content .contactList li {
+      margin-right: 10px; } }
+@media screen and (min-width: 1200px) {
+  .screen#aboutme .content .contactList {
+    font-size: 1.4em; }
+    .screen#aboutme .content .contactList li {
+      margin-right: 20px; }
+  .screen#aboutme #examples h2 {
+    font-size: 1.7em; }
+    .screen#aboutme #examples h2 a {
+      padding: 40px 0 80px; }
+      .screen#aboutme #examples h2 a i {
+        bottom: 45px; } }

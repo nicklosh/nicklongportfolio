@@ -532,7 +532,23 @@ footer{
 	.screen{
 		.content{
 		padding: 100px 0 80px;
+		}
 	}
+	.screen#aboutme{
+		#examples{
+			h2{
+				font-size: 1.5em;
+				a{
+					padding: 30px 0 50px;
+					i{
+						position: absolute;
+						bottom: 30px;
+						left: 50%;
+					}
+				}
+			}
+
+		}
 	}
 	.text{
 		float: right;
@@ -541,5 +557,35 @@ footer{
 		.imageSwitcher{
 		width: 60%;
 		margin: 0 40px;
+	}
+}
+@media screen and (min-width: 950px){
+	.screen#aboutme .content .contactList{
+		font-size: 1.2em;
+		li{
+			margin-right: 10px;
+		}
+	}
+}
+@media screen and (min-width: 1200px){
+	.screen#aboutme{
+		.content .contactList{
+			font-size: 1.4em;
+			li{
+				margin-right: 20px;
+			}
+		}
+		#examples{
+			h2{
+				font-size: 1.7em;
+				a{
+					padding: 40px 0 80px;
+					i{
+						bottom: 45px;
+					}
+				}
+			}
+
+		}
 	}
 }
