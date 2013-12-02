@@ -51,14 +51,11 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  opacity: .9;
   -moz-transition: opacity 0.3s, -moz-transform 0.3s;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   -o-transition: opacity 0.3s, -o-transform 0.3s;
   transition: opacity 0.3s, transform 0.3s;
   width: 100%; }
-  nav:hover, nav:focus {
-    opacity: 1; }
   nav ul {
     padding: 0;
     margin: 0; }
@@ -72,14 +69,8 @@ nav {
       margin-left: 40px;
       margin-right: 37px; }
       nav ul li#navList ul {
-        padding: 0;
-        opacity: 0.5;
-        -moz-transition: opacity 0.3s, -moz-transform 0.3s;
-        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-        -o-transition: opacity 0.3s, -o-transform 0.3s;
-        transition: opacity 0.3s, transform 0.3s; }
+        padding: 0; }
         nav ul li#navList ul li {
-          background: #828282;
           margin: 1px 0; }
           nav ul li#navList ul li a {
             display: block;
@@ -89,8 +80,6 @@ nav {
             -o-transition: padding 0.3s, -o-transform 0.3s;
             transition: padding 0.3s, transform 0.3s;
             font-size: 0; }
-          nav ul li#navList ul li:hover, nav ul li#navList ul li:focus {
-            background: #b2b2b2; }
         nav ul li#navList ul.active {
           opacity: 1; }
           nav ul li#navList ul.active li a {
@@ -107,9 +96,10 @@ nav {
       transition: background 0.3s, transform 0.3s;
       display: block;
       padding: 10px;
-      background: #828282; }
+      background: rgba(0, 0, 0, 0.8); }
       nav ul li a:hover, nav ul li a:focus {
-        background: #b2b2b2; }
+        color: #282828;
+        background: rgba(234, 234, 234, 0.9); }
     nav ul li span {
       /*hide at small screen*/
       display: none; }
@@ -412,7 +402,10 @@ footer {
   .screen#aboutme .content {
     max-width: 40%;
     background: url("/img/profile.jpg") no-repeat right;
-    padding-right: 220px; } }
+    padding-right: 220px; }
+
+  nav ul li span {
+    display: inline-block; } }
 @media screen and (min-width: 650px) {
   .screen#aboutme .content p {
     font-size: 1.4em; }

@@ -4,9 +4,11 @@ $midgray:#828282;
 $darkgray:#404040;
 $black:#282828;
 
-$whiteScreen: rgba(234,234,234, .3);
+$whiteScreen: rgba(234,234,234, .9);
 $shadowLight:rgba(0,0,0, .2);
 $shadowDark:rgba(0,0,0, .4);
+$shadowDarker:rgba(0,0,0, .8);
+
 
 $blue:#5b74a7;
 $blueshadow:darken($blue, 15%);
