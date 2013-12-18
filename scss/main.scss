@@ -498,6 +498,10 @@ footer{
 	nav ul li span{
 		display: inline-block;
 	}
+	nav ul li#navList{
+		margin-left: 107px;
+		margin-right: 116px;
+	}
 }
 @media screen and (min-width: 650px){
 	.screen#aboutme{

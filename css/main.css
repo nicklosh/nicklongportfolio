@@ -405,7 +405,11 @@ footer {
     padding-right: 220px; }
 
   nav ul li span {
-    display: inline-block; } }
+    display: inline-block; }
+
+  nav ul li#navList {
+    margin-left: 107px;
+    margin-right: 116px; } }
 @media screen and (min-width: 650px) {
   .screen#aboutme .content p {
     font-size: 1.4em; }
