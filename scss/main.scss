@@ -527,7 +527,7 @@ footer{
 		}
 	}
 }
-@media screen and (min-width: 850px){
+@media screen and (min-width: 860px){
 	.screen{
 		.content{
 		padding: 100px 0 80px;
@@ -557,6 +557,37 @@ footer{
 		width: 60%;
 		margin: 0 40px;
 	}
+
+	nav{ 
+		ul{
+			display: inline-block;
+			li#NL{
+				display: inline-block;
+				float: none;
+			}
+			li#contact{
+				display: inline-block;
+				position: relative;
+			}
+			li#navList{
+				display: inline-block;
+				margin: 0;
+				a{
+					display: none;
+				}
+				ul, ul.active{
+					li{
+						display: inline-block;
+						margin:0;
+						a{
+							padding: 10px; 
+							font-size: inherit;
+						}
+					}
+				}
+			}
+		}
+	}
 }
 @media screen and (min-width: 950px){
 	.screen#aboutme .content .contactList{
@@ -566,6 +597,11 @@ footer{
 		}
 	}
 }
+
+@media screen and (min-width: 1080px){
+
+}
+
 @media screen and (min-width: 1200px){
 	.screen#aboutme{
 		.content .contactList{
