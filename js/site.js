@@ -14,6 +14,7 @@ $(document).ready(function(){
 		$("#aboutme").height(winHeight);
 	};
 
+
 // main nav 
 	$("#navList > a").on('click', function(event){
 		event.preventDefault();

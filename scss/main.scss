@@ -527,7 +527,7 @@ footer{
 		}
 	}
 }
-@media screen and (min-width: 860px){
+@media screen and (min-width: 900px){
 	.screen{
 		.content{
 		padding: 100px 0 80px;
@@ -559,29 +559,35 @@ footer{
 	}
 
 	nav{ 
-		ul{
-			display: inline-block;
+		text-align: center;
+		> ul{
+			display: table;
+			width: 100%;
 			li#NL{
-				display: inline-block;
+				display: table-cell;
 				float: none;
+				text-align: right;
 			}
 			li#contact{
-				display: inline-block;
+				display: table-cell;
 				position: relative;
+				text-align: left;
 			}
 			li#navList{
-				display: inline-block;
-				margin: 0;
+				display: table-cell;
+				/*width: 618px;*/
 				a{
 					display: none;
 				}
 				ul, ul.active{
+					display: table-row;
 					li{
-						display: inline-block;
+						display: table-cell;
 						margin:0;
 						a{
 							padding: 10px; 
 							font-size: inherit;
+							margin-left: 1px;
 						}
 					}
 				}
