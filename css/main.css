@@ -60,14 +60,17 @@ nav {
     padding: 0;
     margin: 0; }
     nav ul li#NL {
-      float: left; }
+      text-align: center;
+      float: left;
+      width: 20%; }
       nav ul li#NL i {
         width: 19px;
         text-align: center; }
     nav ul li#navList {
       display: block;
-      margin-left: 40px;
-      margin-right: 37px; }
+      padding: 0 20%;
+      margin-left: 1px;
+      margin-right: 1px; }
       nav ul li#navList ul {
         padding: 0; }
         nav ul li#navList ul li {
@@ -86,6 +89,8 @@ nav {
             padding: 10px 30px;
             font-size: inherit; }
     nav ul li#contact {
+      text-align: center;
+      width: 20%;
       position: absolute;
       top: 0;
       right: 0; }
@@ -405,11 +410,7 @@ footer {
     padding-right: 220px; }
 
   nav ul li span {
-    display: inline-block; }
-
-  nav ul li#navList {
-    margin-left: 107px;
-    margin-right: 116px; } }
+    display: inline-block; } }
 @media screen and (min-width: 650px) {
   .screen#aboutme .content p {
     font-size: 1.4em; }
@@ -446,18 +447,22 @@ footer {
     text-align: center; }
     nav > ul {
       display: table;
-      width: 100%; }
+      margin: 0 auto; }
       nav > ul li#NL {
         display: table-cell;
         float: none;
-        text-align: right; }
+        text-align: right;
+        width: auto; }
       nav > ul li#contact {
         display: table-cell;
         position: relative;
-        text-align: left; }
+        text-align: left;
+        width: auto; }
+        nav > ul li#contact a {
+          margin-left: 1px; }
       nav > ul li#navList {
         display: table-cell;
-        /*width: 618px;*/ }
+        padding: 0; }
         nav > ul li#navList a {
           display: none; }
         nav > ul li#navList ul, nav > ul li#navList ul.active {
