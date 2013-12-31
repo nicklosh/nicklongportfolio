@@ -43,6 +43,17 @@ $(document).ready(function(){
 		$("#navList ul").removeClass("active");
 	});
 
+// nav indicator onscreen
+	$('#peanuts').waypoint(function(){
+	    $('nav li a').removeClass('onScreen');
+		$('a[href="#peanuts"').addClass('onScreen');
+	});
+
+	$('#results').waypoint(function(){
+	    $('nav li a').removeClass('onScreen');
+		$('a[href="#results"').addClass('onScreen');
+	});
+
 // image switcher
 
 	// set active image to display
