@@ -126,6 +126,49 @@ nav{
 					background: $whiteScreen;
 				}
 			}
+			a[href="#peanuts"].onScreen{
+				background: $greenlight;
+				color: $black;
+			}
+			a[href="#results"].onScreen{
+				background: $aqualight;
+				color: $black;
+			}
+			a[href="#nicklosh"].onScreen{
+				background: $midgray;
+				color: $black;
+			}
+			a[href="#ameb"].onScreen{
+				background: $purplelight;
+				color: $black;
+			}
+			a[href="#syllabus"].onScreen{
+				background: $maroonlight;
+				color: $black;
+			}
+			a[href="#builder"].onScreen{
+				background: $redlight;
+				color: $black;
+			}
+
+			a[href="#peanuts"]:hover{
+				background: $greenwhite;
+			}
+			a[href="#results"]:hover{
+				background: $aquawhite;
+			}
+			a[href="#nicklosh"]:hover{
+				background: $lightgray;
+			}
+			a[href="#ameb"]:hover{
+				background: $purplewhite;
+			}
+			a[href="#syllabus"]:hover{
+				background: $maroonwhite;
+			}
+			a[href="#builder"]:hover{
+				background: $redwhite;
+			}
 			span{ /*hide at small screen*/
 				display:none;
 			}
@@ -593,6 +636,7 @@ footer{
 						display: table-cell;
 						margin:0;
 						a{
+							@include transition(background);
 							padding: 10px; 
 							font-size: inherit;
 							margin-left: 1px;
