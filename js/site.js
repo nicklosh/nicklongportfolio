@@ -12,6 +12,12 @@ $(document).ready(function(){
 	// Get window height	
 		var winHeight = $(window).height();
 		$("#aboutme").height(winHeight);
+
+		// if winHeight > (".screen").height();
+		// {
+		// 	$(".screen").height(winHeight);
+		// }
+		
 	};
 
 
