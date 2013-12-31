@@ -30,6 +30,8 @@ $(document).ready(function(){
 // nav scrolling
 	$('a[href^="#"]').on('click',function(event) {
 	    event.preventDefault();
+	    $('nav li a').removeClass('onScreen');
+	    $(this).addClass('onScreen');
 	    var target = this.hash,
 	    $target = $(target);
 	    $('html, body').stop().animate({
