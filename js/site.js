@@ -30,8 +30,6 @@ $(document).ready(function(){
 // nav scrolling
 	$('a[href^="#"]').on('click',function(event) {
 	    event.preventDefault();
-	    $('nav li a').removeClass('onScreen');
-	    $(this).addClass('onScreen');
 	    var target = this.hash,
 	    $target = $(target);
 	    $('html, body').stop().animate({
@@ -44,15 +42,27 @@ $(document).ready(function(){
 	});
 
 // nav indicator onscreen
-	$('#peanuts').waypoint(function(){
-	    $('nav li a').removeClass('onScreen');
-		$('a[href="#peanuts"').addClass('onScreen');
-	});
+	function navOnScreen(panel, navItem, nextItem){
+		$(panel).waypoint(function(down){
+		    resetNavItem();
+			$(navItem).addClass('onScreen');
+		});
+		$(nextItem).waypoint(function(up){
+		    resetNavItem();
+			$(navItem).addClass('onScreen');
+		}, {offset: '50%'});
+	};
 
-	$('#results').waypoint(function(){
-	    $('nav li a').removeClass('onScreen');
-		$('a[href="#results"').addClass('onScreen');
-	});
+	function resetNavItem(){
+		$('nav li a').removeClass('onScreen');
+	}
+
+	var panel = $(".screen");
+	for(var i = 0, ii = panel.length; i < ii; i++){
+		var panelId = "a[href='#"+ $(panel[i]).attr("id");"']";
+		navOnScreen(panel[i], panelId , panel[i + 1]);
+	};
+
 
 // image switcher
 
@@ -68,7 +78,6 @@ $(document).ready(function(){
 		swtichContainers[i].displays = $(swtichContainers[i]).find(".switchDisplay i");
 		swtichContainers[i].next = $(swtichContainers[i]).find(".next");
 		swtichContainers[i].prev = $(swtichContainers[i]).find(".prev");
-		
 		switcher(swtichContainers[i]);		
 
 	};
