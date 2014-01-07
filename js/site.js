@@ -13,11 +13,17 @@ $(document).ready(function(){
 		var winHeight = $(window).height();
 		$("#aboutme").height(winHeight);
 
-		// if winHeight > (".screen").height();
-		// {
-		// 	$(".screen").height(winHeight);
-		// }
-		
+		// get list of screens
+		var screens = $(".screen");
+		// for each
+		for (var i = screens.length - 1; i >= 0; i--) {
+		// check if  winHeight > screenOh
+		var screenOh = $(screens[i]).height();
+			if ( screenOh < winHeight) {
+				// then make screen height == winHeight
+				$(screens[i]).height(winHeight);
+			};
+		};
 	};
 
 
@@ -46,7 +52,7 @@ $(document).ready(function(){
 		$(panel).waypoint(function(down){
 		    resetNavItem();
 			$(navItem).addClass('onScreen');
-		});
+		}, {offset: '40px'});
 		$(nextItem).waypoint(function(up){
 		    resetNavItem();
 			$(navItem).addClass('onScreen');
