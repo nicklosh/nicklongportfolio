@@ -65,7 +65,8 @@ $(document).ready(function(){
 
 	var panel = $(".screen");
 	for(var i = 0, ii = panel.length; i < ii; i++){
-		var panelId = "a[href='#"+ $(panel[i]).attr("id");"']";
+		var id = $(panel[i]).attr("id");
+		var panelId = "a[href='#"+ id +"']";
 		navOnScreen(panel[i], panelId , panel[i + 1]);
 	};
 
