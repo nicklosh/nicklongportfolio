@@ -17,8 +17,9 @@ $(document).ready(function(){
 		var screens = $(".screen");
 		// for each
 		for (var i = screens.length - 1; i >= 0; i--) {
-		// check if  winHeight > screenOh
-		var screenOh = $(screens[i]).height();
+			// reset screen heights 
+			// check if  winHeight > screenOh
+			var screenOh = $(screens[i]).height();
 			if ( screenOh < winHeight) {
 				// then make screen height == winHeight
 				$(screens[i]).height(winHeight);
@@ -65,8 +66,7 @@ $(document).ready(function(){
 
 	var panel = $(".screen");
 	for(var i = 0, ii = panel.length; i < ii; i++){
-		var id = $(panel[i]).attr("id");
-		var panelId = "a[href='#"+ id +"']";
+		var id = $(panel[i]).attr("id"), panelId = "a[href='#"+ id +"']";
 		navOnScreen(panel[i], panelId , panel[i + 1]);
 	};
 
