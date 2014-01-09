@@ -583,7 +583,6 @@ footer{
 			bottom: 0;
 			right: 0;
 			height: 450px;
-		/*padding: 100px 0 80px;*/
 		}
 	}
 	.screen#aboutme{
@@ -612,7 +611,7 @@ footer{
 	}
 
 	nav{ 
-		background-color: $shadowDarker;
+		/*background-color: $shadowDarker;*/
 		text-align: center;
 		> ul{
 			display: table;
