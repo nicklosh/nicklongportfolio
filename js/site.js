@@ -18,6 +18,8 @@ $(document).ready(function(){
 		// for each
 		for (var i = screens.length - 1; i >= 0; i--) {
 			// reset screen heights 
+			$(screens[i]).height("");
+			
 			// check if  winHeight > screenOh
 			var screenOh = $(screens[i]).height();
 			if ( screenOh < winHeight) {

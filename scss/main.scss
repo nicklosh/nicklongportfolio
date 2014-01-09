@@ -537,9 +537,9 @@ footer{
 @media screen and (min-width: 630px){
 	.screen#aboutme{
 		.content{
-			max-width: 40% ;
-			background: url("/img/profile.jpg") no-repeat right;
-			padding-right: 220px;
+			max-width: 60% ;
+			/*background: url("/img/profile.jpg") no-repeat right;*/
+			/*padding-right: 220px;*/
 
 		}
 	}
@@ -574,8 +574,16 @@ footer{
 }
 @media screen and (min-width: 900px){
 	.screen{
+		position: relative;
 		.content{
-		padding: 100px 0 80px;
+			margin: auto;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			height: 450px;
+		/*padding: 100px 0 80px;*/
 		}
 	}
 	.screen#aboutme{
