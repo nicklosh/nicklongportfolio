@@ -16,15 +16,26 @@ $(document).ready(function(){
 		// get list of screens
 		var screens = $(".screen");
 		// for each
-		for (var i = screens.length - 1; i >= 0; i--) {
+		for (var i = screens.length - 1; i >= 1; i--) {
 			// reset screen heights 
 			$(screens[i]).height("");
-			
 			// check if  winHeight > screenOh
 			var screenOh = $(screens[i]).height();
 			if ( screenOh < winHeight) {
 				// then make screen height == winHeight
-				$(screens[i]).height(winHeight);
+
+				if (winHeight < 900){
+					$(screens[i]).height(winHeight);
+				}				
+				else {
+					$(screens[i]).height(900);
+					// style footer to make up difference
+					var difference = winHeight - 900,
+					footerH = $('footer').height(); 
+					if (difference > footerH){
+						$('footer').height(difference);
+					}				
+				}
 			};
 		};
 	};
