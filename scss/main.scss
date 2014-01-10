@@ -616,6 +616,9 @@ footer{
 		> ul{
 			display: table;
 			margin: 0 auto;
+			-webkit-box-shadow: 825px 0px 0px 0px  $shadowDarker , -825px 0px 0px 0px  $shadowDarker ;
+			-moz-box-shadow: 830px 0px 0px 0px  $shadowDarker , -830px 0px 0px 0px  $shadowDarker ;
+			box-shadow: 825px 0px 0px 0px  $shadowDarker , -825px 0px 0px 0px  $shadowDarker ;
 			li#NL{
 				display: table-cell;
 				float: none;

@@ -487,7 +487,10 @@ footer {
     text-align: center; }
     nav > ul {
       display: table;
-      margin: 0 auto; }
+      margin: 0 auto;
+      -webkit-box-shadow: 825px 0px 0px 0px rgba(0, 0, 0, 0.8), -825px 0px 0px 0px rgba(0, 0, 0, 0.8);
+      -moz-box-shadow: 830px 0px 0px 0px rgba(0, 0, 0, 0.8), -830px 0px 0px 0px rgba(0, 0, 0, 0.8);
+      box-shadow: 825px 0px 0px 0px rgba(0, 0, 0, 0.8), -825px 0px 0px 0px rgba(0, 0, 0, 0.8); }
       nav > ul li#NL {
         display: table-cell;
         float: none;
