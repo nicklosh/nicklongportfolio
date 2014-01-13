@@ -1,10 +1,12 @@
 $(document).ready(function(){
 // Init	
 	fitScreen();
+	peanutsInc();
 
 // on window resize	
 	$(window).resize(function(){
 		fitScreen();
+		peanutsInc();
 	});
 
 // screen size function
@@ -40,6 +42,18 @@ $(document).ready(function(){
 		};
 	};
 
+// include peanuts
+	function peanutsInc() {
+		var winWidth = $(window).width();
+		if (winWidth >= 900){
+			if ($("#peanutsComic iframe").length <= 0){
+				$("#peanutsComic").append('<iframe src="/peanuts/" height="402px" width="550px" frameborder="0" scrolling="vertical" marginheight="0" marginwidth="0"></iframe>');
+			}
+		}
+		else {
+			$("#peanutsComic").html("");
+		}
+	};
 
 // main nav 
 	$("#navList > a").on('click', function(event){
