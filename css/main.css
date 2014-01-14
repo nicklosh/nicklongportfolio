@@ -482,8 +482,13 @@ footer {
     width: 60%;
     margin: 0 40px; }
 
+  #peanutsComic {
+    margin: 0 40px; }
+    #peanutsComic iframe {
+      height: 400px;
+      width: 550px; }
+
   nav {
-    /*background-color: $shadowDarker;*/
     text-align: center; }
     nav > ul {
       display: table;
