@@ -7,7 +7,7 @@ if(!isset($_REQUEST['password'])) //1
 else //3
 {
 	$password = $_REQUEST['password'];
-	if($password == 'oldmate')
+	if($password == 'NOTTHISPASSWORD')
 	{
 		include 'index.html.php';
 	}
