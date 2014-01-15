@@ -7,7 +7,7 @@ if(!isset($_REQUEST['password'])) //1
 else //3
 {
 	$password = $_REQUEST['password'];
-	if($password == 'NOTTHISPASSWORD')
+	if($password == 'NOT THIS LOL')
 	{
 		include 'index.html.php';
 	}

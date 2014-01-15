@@ -45,7 +45,9 @@ h1, h2, h3 {
 
 #error {
   font-size: 2em;
-  text-shadow: 1px 1px 1px #3f5176; }
+  height: auto;
+  max-width: 500px;
+  border: 1px solid red; }
 
 nav {
   z-index: 300;

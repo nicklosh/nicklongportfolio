@@ -55,8 +55,9 @@ h1, h2, h3{font-weight: 100; margin: 0;}
 
 #error{
 	font-size: 2em;
-	@include textshadow($blueshadow);
-
+	height: auto;
+	max-width: 500px;
+	border: 1px solid red;
 }
 
 nav{
