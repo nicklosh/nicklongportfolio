@@ -1,6 +1,6 @@
 <?php
 
-vif(!isset($_REQUEST['password'])) 
+if(!isset($_REQUEST['password'])) 
 {
 	include 'pword.html.php';
 }

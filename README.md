@@ -1,4 +1,5 @@
-nicklongportfolio
+nick long examples of work
 =================
+nicklong.id.au
 
-My portfolio site
+
