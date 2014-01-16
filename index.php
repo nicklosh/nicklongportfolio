@@ -1,10 +1,10 @@
 <?php
 
-if(!isset($_REQUEST['password'])) //1
+vif(!isset($_REQUEST['password'])) 
 {
 	include 'pword.html.php';
 }
-else //3
+else 
 {
 	$password = $_REQUEST['password'];
 	if($password == 'NOT THIS LOL')
