@@ -13,7 +13,8 @@ $(document).ready(function(){
 	function fitScreen(){
 	// Get window height	
 		var winHeight = $(window).height();
-		$("#aboutme").height(winHeight);
+		$("#aboutme, #errorscreen").height(winHeight);
+
 
 		// get list of screens
 		var screens = $(".screen");
@@ -54,6 +55,17 @@ $(document).ready(function(){
 			$("#peanutsComic").html('<div class="imageSwitcher"><div class="image active" style="opacity:1;"><span id="peanutsImg"><span></span></span></div></div>');
 		}
 	};
+
+// contact modal
+	$("a[href^='*contact.html']").on(function(event){
+		event.preventDefault();
+	})
+	// get all a href to contact links
+	// on click
+	// prevent default event
+	// get body el
+	// load contactModal with adjax
+	// animation
 
 // main nav 
 	$("#navList > a").on('click', function(event){
