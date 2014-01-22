@@ -57,15 +57,12 @@ $(document).ready(function(){
 	};
 
 // contact modal
-	$("a[href^='*contact.html']").on(function(event){
+	$("a[href='/contact.html']").on('click', function(event){
 		event.preventDefault();
-	})
-	// get all a href to contact links
-	// on click
-	// prevent default event
-	// get body el
-	// load contactModal with adjax
-	// animation
+		$('body').append('<div id="contactPage"></div>');
+		$('#contactPage').load('/contact.html');
+
+	});
 
 // main nav 
 	$("#navList > a").on('click', function(event){
