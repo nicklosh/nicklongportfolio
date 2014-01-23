@@ -15,7 +15,6 @@ $(document).ready(function(){
 		var winHeight = $(window).height();
 		$("#aboutme, #errorscreen").height(winHeight);
 
-
 		// get list of screens
 		var screens = $(".screen");
 		// for each
@@ -59,9 +58,18 @@ $(document).ready(function(){
 // contact modal
 	$("a[href='/contact.html']").on('click', function(event){
 		event.preventDefault();
-		$('body').append('<div id="contactPage"></div>');
-		$('#contactPage').load('/contact.html');
-
+		if ($(window).width() <= 500) {
+			$('body').load('/contact.html', function(){
+				$('#contactForm').css({opacity:1});
+			});
+		}
+		else{
+			$('body').append('<div id="contactPage"></div>');
+			$('#contactPage').load('/contact.html', function(){
+				$('#contactPage').addClass('animated');
+				$('#contactForm').animate({opacity: 1}, 300);
+			});
+		};
 	});
 
 // main nav 
