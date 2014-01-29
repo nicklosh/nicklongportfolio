@@ -1,6 +1,5 @@
 <?php
 include 'index.html.php';
-
 // if(!isset($_REQUEST['password'])) 
 // {
 // 	include 'pword.html.php';
