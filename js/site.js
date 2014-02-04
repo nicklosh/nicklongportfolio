@@ -72,6 +72,11 @@ $(document).ready(function(){
 		};
 	});
 
+	$('#cancel').on('click', function(event){
+			event.preventDefault();
+			$('#contactPage').remove();
+	});
+
 // main nav 
 	$("#navList > a").on('click', function(event){
 		event.preventDefault();
