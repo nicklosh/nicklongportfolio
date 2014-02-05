@@ -61,6 +61,7 @@ $(document).ready(function(){
 		if ($(window).width() <= 500) {
 			$('body').load('/contact.html', function(){
 				$('#contactForm').css({opacity:1});
+				$('#name').focus();
 			});
 		}
 		else{
@@ -68,6 +69,7 @@ $(document).ready(function(){
 			$('#contactPage').load('/contact.html', function(){
 				$('#contactPage').addClass('animated');
 				$('#contactForm').animate({opacity: 1}, 300);
+				$('#name').focus();
 			});
 		};
 	});
