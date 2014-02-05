@@ -76,14 +76,14 @@ $(document).ready(function(){
 	});
 
 	function formEsc()
-	{
+	{	
 		$('#cancel').on('click', function(event){
 				event.preventDefault();
 				$('#contactPage').animate({opacity: 0}, 200, function(){
 					$('#contactPage').remove();			
 				});
 		});
-	}
+	};
 
 // main nav 
 	$("#navList > a").on('click', function(event){

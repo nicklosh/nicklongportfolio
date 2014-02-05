@@ -329,6 +329,7 @@ footer {
 
 #contactForm {
   width: 80%;
+  max-width: 800px;
   margin: 0 auto;
   background: #5b74a7;
   padding: 30px;
@@ -347,6 +348,7 @@ footer {
   #contactForm p:last {
     text-align: right; }
   #contactForm button {
+    margin-right: 10px;
     border: none;
     padding: 10px 20px;
     background-color: rgba(0, 0, 0, 0.2);
