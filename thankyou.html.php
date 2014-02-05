@@ -10,8 +10,8 @@
 	<script src="/js/site.js"></script>
 </head>
 <body>
-<div class="screen">
-	<div class="content">
+<div class="screen" id="singlepage">
+	<div class="content" id="singlecontent">
 		<p>Thankyou <?php $_POST['name']?>, your message has been sent.</p>
 		<p>Return to <a href="">home page?</a></p>
 	</div>

@@ -13,7 +13,7 @@ $(document).ready(function(){
 	function fitScreen(){
 	// Get window height	
 		var winHeight = $(window).height();
-		$("#aboutme, #errorscreen").height(winHeight);
+		$("#aboutme, #singlepage").height(winHeight);
 
 		// get list of screens
 		var screens = $(".screen");
