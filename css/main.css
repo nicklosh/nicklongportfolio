@@ -358,6 +358,13 @@ footer {
     #contactForm button:hover, #contactForm button:focus {
       background-color: rgba(0, 0, 0, 0.4); }
 
+#thankyou {
+  position: absolute;
+  background: black;
+  z-index: 500;
+  left: 30%;
+  padding: 10px; }
+
 @media screen and (min-width: 320px) {
   .image {
     max-width: 550px;

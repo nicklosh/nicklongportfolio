@@ -429,7 +429,14 @@ footer{
 		}
 	}
 }
-	
+
+#thankyou {
+position: absolute;
+background: black;
+z-index: 500;
+left: 30%;
+padding: 10px;
+}	
 
 @media screen and (min-width: 320px){
 	.image{
