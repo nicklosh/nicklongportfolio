@@ -62,6 +62,7 @@ $(document).ready(function(){
 			$('body').load('/contact.html', function(){
 				$('#contactForm').css({opacity:1});
 				$('#name').focus();
+				FormValidation.init();
 			});
 		}
 		else{
@@ -71,6 +72,7 @@ $(document).ready(function(){
 				$('#contactForm').animate({opacity: 1}, 300);
 				$('#name').focus();
 				formEsc();
+				FormValidation.init();
 			});
 		};
 	});
@@ -83,6 +85,52 @@ $(document).ready(function(){
 					$('#contactPage').remove();			
 				});
 		});
+	};
+
+// Form validaton
+	var FormValidation = 
+	{
+		init: function()
+		{
+			$("#contactForm").bind("submit", FormValidation.submitListener);
+		},
+		rules:
+		{
+			required: /./,
+			email: /^[\w\.\-]+@([\w\-]+\.)+[a-zA-Z]+$/
+		},
+		errors:
+		{
+			required: "Please fill in this required field.",
+			email: "Please enter a valid email address into this field."
+		},
+		submitListener: function(event)
+		{
+			var fields = this.elements;
+			
+			for (var i = 0, ii = fields.length; i < ii; i++)
+			{
+				var className = fields[i].className;
+				var classes = className.split(" ");
+				
+				for (var j = 0, jj = classes.length; j < jj; j++)
+				{
+					var oneClass = classes[j];
+					var rule = FormValidation.rules[oneClass];
+					if (rule)
+					{
+						if (!rule.test(fields[i].value))
+						{
+							fields[i].focus();
+							alert(FormValidation.errors[oneClass]);
+							event.preventDefault();
+							return;
+						}
+					}
+				}
+			}
+
+		}		
 	};
 
 // main nav 
