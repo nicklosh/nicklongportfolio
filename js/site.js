@@ -70,14 +70,20 @@ $(document).ready(function(){
 				$('#contactPage').addClass('animated');
 				$('#contactForm').animate({opacity: 1}, 300);
 				$('#name').focus();
+				formEsc();
 			});
 		};
 	});
 
-	$('#cancel').on('click', function(event){
-			event.preventDefault();
-			$('#contactPage').remove();
-	});
+	function formEsc()
+	{
+		$('#cancel').on('click', function(event){
+				event.preventDefault();
+				$('#contactPage').animate({opacity: 0}, 200, function(){
+					$('#contactPage').remove();			
+				});
+		});
+	}
 
 // main nav 
 	$("#navList > a").on('click', function(event){
