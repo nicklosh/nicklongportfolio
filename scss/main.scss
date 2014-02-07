@@ -405,10 +405,11 @@ footer{
 	}
 	input{
 		line-height: 1.5em;
-
+		/*outline-color: $bluelighter;*/
 	}
 	textarea{
 		line-height: 1.5em;	
+		/*outline-color: $bluelighter;*/
 		&#comment{
 			width: 100%;
 			min-height: 100px;
@@ -417,6 +418,12 @@ footer{
 	}
 	p:last{
 		text-align: right;
+	}
+	#warning{
+		background: $blueshadow;
+		padding: 3px;
+		margin-left: 3px; 
+		margin-top: 3px;
 	}
 	button{
 		margin-right: 10px;

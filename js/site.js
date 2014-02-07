@@ -121,8 +121,9 @@ $(document).ready(function(){
 					{
 						if (!rule.test(fields[i].value))
 						{
+							$("#warning").remove();
 							fields[i].focus();
-							alert(FormValidation.errors[oneClass]);
+							$(fields[i]).addClass('highlight').after("<span id='warning'> "+FormValidation.errors[oneClass]+"</span>");
 							event.preventDefault();
 							return;
 						}
