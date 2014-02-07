@@ -470,12 +470,7 @@ footer {
     font-size: 2em; } }
 @media screen and (min-width: 630px) {
   .screen#aboutme .content {
-    max-width: 60%;
-    /*background: url("/img/profile.jpg") no-repeat right;*/
-    /*padding-right: 220px;*/ }
-
-  nav ul li span {
-    display: inline-block; } }
+    max-width: 60%; } }
 @media screen and (min-width: 650px) {
   .screen#aboutme .content p {
     font-size: 1.4em; }
@@ -486,7 +481,10 @@ footer {
   .screen#aboutme .content p {
     font-size: 1.4em; }
   .screen#aboutme .content .contactList {
-    font-size: 1em; } }
+    font-size: 1em; }
+
+  nav ul li span {
+    display: inline-block; } }
 @media screen and (min-width: 900px) {
   .screen {
     position: relative; }
@@ -520,8 +518,13 @@ footer {
     margin: 0 40px; }
     #peanutsComic iframe {
       height: 400px;
-      width: 550px; }
-
+      width: 550px; } }
+@media screen and (min-width: 950px) {
+  .screen#aboutme .content .contactList {
+    font-size: 1.2em; }
+    .screen#aboutme .content .contactList li {
+      margin-right: 10px; } }
+@media screen and (min-width: 1080px) {
   nav {
     text-align: center; }
     nav > ul {
@@ -560,11 +563,6 @@ footer {
               padding: 10px;
               font-size: inherit;
               margin-left: 1px; } }
-@media screen and (min-width: 950px) {
-  .screen#aboutme .content .contactList {
-    font-size: 1.2em; }
-    .screen#aboutme .content .contactList li {
-      margin-right: 10px; } }
 @media screen and (min-width: 1200px) {
   .screen#aboutme .content .contactList {
     font-size: 1.4em; }

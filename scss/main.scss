@@ -571,14 +571,9 @@ footer{
 	.screen#aboutme{
 		.content{
 			max-width: 60% ;
-			/*background: url("/img/profile.jpg") no-repeat right;*/
-			/*padding-right: 220px;*/
-
 		}
 	}
-	nav ul li span{
-		display: inline-block;
-	}
+
 
 }
 @media screen and (min-width: 650px){
@@ -603,6 +598,9 @@ footer{
 				font-size: 1em;
 			}
 		}
+	}
+		nav ul li span{
+		display: inline-block;
 	}
 }
 @media screen and (min-width: 900px){
@@ -650,6 +648,18 @@ footer{
 		}
 	}
 
+
+}
+@media screen and (min-width: 950px){
+	.screen#aboutme .content .contactList{
+		font-size: 1.2em;
+		li{
+			margin-right: 10px;
+		}
+	}
+}
+
+@media screen and (min-width: 1080px){
 	nav{ 
 		text-align: center;
 		> ul{
@@ -694,19 +704,7 @@ footer{
 				}
 			}
 		}
-	}
-}
-@media screen and (min-width: 950px){
-	.screen#aboutme .content .contactList{
-		font-size: 1.2em;
-		li{
-			margin-right: 10px;
-		}
-	}
-}
-
-@media screen and (min-width: 1080px){
-
+	}	
 }
 
 @media screen and (min-width: 1200px){
