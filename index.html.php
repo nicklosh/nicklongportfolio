@@ -10,6 +10,11 @@
 	<script src="/js/vendor/jquery-1.10.2.min.js"></script>
 	<script src="/js/vendor/waypoints.min.js"></script>
 	<script src="/js/site.js"></script>
+	<link rel="icon" href="nlfavicon.ico">
+	<link href="img/nlicon-60.png" rel="apple-touch-icon" />
+	<link href="img/nlicon-76.png" rel="apple-touch-icon" sizes="76x76" />
+	<link href="img/nlicon-120.png" rel="apple-touch-icon" sizes="120x120" />
+	<link href="img/nlicon-152.png" rel="apple-touch-icon" sizes="152x152" />
 </head>
 <body>
 	<nav>
