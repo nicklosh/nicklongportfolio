@@ -6,7 +6,7 @@ header("Pragma: no-cache");
 
 if (isset($_POST['submit']))	
 {
-	$to = 'nkmlong@gmail.com';
+	$to = 'nick@nicklong.id.au';
 	$from = $_POST['email']; 
 	$name = $_POST['name'];
 	$comment = $_POST['comment'];
