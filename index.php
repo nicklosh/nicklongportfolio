@@ -13,7 +13,7 @@ if (isset($_POST['submit']))
 	$subject = 'Examples of work contact form'; 
 	$subject2 = 'Copy of your email'; 
 	$message = $name . " wrote the following: " . "\n\n" . $comment;
-	$message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
+	$message2 = "Here is a copy of your message " . $name . "\n\n" . $comment;
 
 	$headers = "From:" . $from;
 	$headers2 = "From:" . $to;
