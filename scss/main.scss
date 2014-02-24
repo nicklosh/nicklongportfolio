@@ -435,6 +435,7 @@ footer{
 		background-color: $shadowLight;
 		color: $white;
 		@include transition(background);
+		@include border-radius;
 		&:hover, &:focus{
 			background-color: $shadowDark;
 
