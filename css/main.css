@@ -217,7 +217,7 @@ footer {
 
 .text {
   max-width: 550px;
-  margin: 0 auto; }
+  margin: 0 auto 20px; }
 
 /*images*/
 .imageSwitcher {
