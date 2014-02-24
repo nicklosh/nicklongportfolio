@@ -21,7 +21,10 @@ p {
     transition: background 0.3s, transform 0.3s;
     border-bottom: 1px solid; }
     p a:hover, p a:focus {
-      background: rgba(0, 0, 0, 0.4); }
+      background: rgba(0, 0, 0, 0.4);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px; }
 
 h1, h2, h3 {
   /*font-weight: 100;*/
@@ -32,7 +35,10 @@ h2 {
 
 .externalLink {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.2); }
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px; }
   .externalLink a {
     display: block;
     padding: 10px;
@@ -297,7 +303,10 @@ footer {
     -o-transition: background 0.3s, -o-transform 0.3s;
     transition: background 0.3s, transform 0.3s; }
     .controls .prev:hover, .controls .next:hover {
-      background: rgba(0, 0, 0, 0.2); }
+      background: rgba(0, 0, 0, 0.2);
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px; }
     .controls .prev i, .controls .next i {
       padding: 0 10px; }
       .controls .prev i:hover, .controls .prev i:focus, .controls .next i:hover, .controls .next i:focus {
