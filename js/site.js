@@ -47,7 +47,7 @@ $(document).ready(function(){
 		var winWidth = $(window).width();
 		if (winWidth >= 900){
 			if ($("#peanutsComic iframe").length <= 0){
-				$("#peanutsComic").html('<iframe src="/peanuts/" frameborder="0" scrolling="vertical" marginheight="0" marginwidth="0"></iframe>');
+				$("#peanutsComic").html('<iframe src="/peanuts/inPage.html" frameborder="0" scrolling="vertical" marginheight="0" marginwidth="0"></iframe>');
 			}
 		}
 		else {
