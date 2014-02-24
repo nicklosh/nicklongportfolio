@@ -37,7 +37,7 @@
 		<div class="screen" id="aboutme">
 			<div class="content">
 				<h1>Nick Long</h1>
-				<p>I'm a  front end developer with a passion for user interaction and an eye for visual design.</p>
+				<p>I'm a  front-end developer with a passion for user interaction and an eye for visual design.</p>
 				<p>I build responsive user-friendly interfaces for websites and applications.</p>
 				<ul class="contactList">
 					<li><a href="/contact.html"><i class="fa fa-envelope"></i> Contact me</a></li>
@@ -128,8 +128,7 @@
 				<p>A web application for online enrolments for the Australian Music Education Board NSW.</p>
 				<p>My role was to improve and implement the visual design of the existing layout. </p>
 				<p>The enrolment process was stressful for users mostly due to them being, typically, older and less computer literate.</p>
-				<p>By employing a calming colour palette and making interaction easier by clearly defining the controls and results the user's process became a lot less daunting and a lot more accessible.
-With the inclusion of AMEB branding and responsive design the look and feel was dramatically improved.</p>
+				<p>By employing a calming colour palette and clearly defined controls and results, I aimed to make the user's process easier, much less daunting and more accessible. With the inclusion of AMEB branding and responsive design the look and feel was dramatically improved.</p>
 			</div>
 			<div class="imageSwitcher">
 				<div class="image active"><span id="amebImg1"><span></span></span></div>
