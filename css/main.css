@@ -348,10 +348,10 @@ footer {
     margin-bottom: 5px; }
   #contactForm input {
     line-height: 1.5em;
-    /*outline-color: $bluelighter;*/ }
+    margin-bottom: 5px; }
   #contactForm textarea {
     line-height: 1.5em;
-    /*outline-color: $bluelighter;*/ }
+    margin-bottom: 5px; }
     #contactForm textarea#comment {
       width: 100%;
       min-height: 100px;
@@ -362,7 +362,8 @@ footer {
     background: #3f5176;
     padding: 3px;
     margin-left: 3px;
-    margin-top: 3px; }
+    margin-top: 3px;
+    white-space: nowrap; }
   #contactForm button {
     margin-right: 10px;
     border: none;
