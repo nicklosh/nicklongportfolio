@@ -160,7 +160,8 @@ nav {
   clear: both; }
   .screen .content {
     padding: 70px 10px 20px;
-    max-width: 940px;
+    /*max-width: 940px;*/
+    width: 90%;
     margin: 0 auto; }
     .screen .content > br {
       clear: both; }
@@ -216,16 +217,19 @@ footer {
     background: #9daccb; }
 
 .text {
-  max-width: 550px;
+  /*width: 90%;*/
+  /*max-width: 550px;*/
   margin: 0 auto 20px; }
 
 /*images*/
 .imageSwitcher {
   position: relative;
-  max-width: 550px; }
+  /*max-width: 550px;*/
+  /*width: 550px;*/ }
 
 .image {
-  max-width: 275px;
+  width: 100%;
+  /*max-width: 275px;*/
   display: none; }
   .image.active {
     display: block;
@@ -289,7 +293,8 @@ footer {
   background-image: url("/img/screenshots-sml/pb-userhelp-sml.png"); }
 
 .controls {
-  max-width: 275px; }
+  /*width: 275px;*/
+  /*max-width: 275px;*/ }
   .controls i {
     opacity: .3;
     -moz-transition: opacity 0.3s, -moz-transform 0.3s;
@@ -338,7 +343,7 @@ footer {
 
 #contactForm {
   width: 80%;
-  max-width: 800px;
+  /*max-width: 800px;*/
   margin: 0 auto;
   background: #5b74a7;
   padding: 30px;
@@ -382,7 +387,8 @@ footer {
 
 @media screen and (min-width: 320px) {
   .image {
-    max-width: 550px;
+    /*max-width: 550px;*/
+    /*width: 550px;*/
     display: none; }
     .image.active {
       display: block;
@@ -457,12 +463,14 @@ footer {
       right: -40px; }
 
   .controls {
-    max-width: 550px; } }
+    /*max-width: 550px;*/
+    /*width: 550px;*/ } }
 @media screen and (min-width: 550px) {
   .screen#aboutme {
     position: relative; }
     .screen#aboutme .content {
-      max-width: 80%;
+      /*max-width: 80%;*/
+      width: 80%;
       height: 300px;
       margin: auto;
       position: absolute;
@@ -477,19 +485,22 @@ footer {
           left: 125px; }
 
   #singlecontent {
-    max-width: 400px;
+    /*max-width: 400px;*/
+    width: 400px;
     height: 300px;
     padding: none;
     font-size: 2em; } }
 @media screen and (min-width: 630px) {
   .screen#aboutme .content {
-    max-width: 60%; } }
+    /*max-width: 60% ;*/
+    width: 60%; } }
 @media screen and (min-width: 650px) {
   .screen#aboutme .content p {
     font-size: 1.4em; }
 
   .imageSwitcher {
-    margin: 0 auto; } }
+    margin: 0 auto;
+    width: 550px; } }
 @media screen and (min-width: 700px) {
   .screen#aboutme .content p {
     font-size: 1.4em; }
@@ -537,6 +548,12 @@ footer {
     font-size: 1.2em; }
     .screen#aboutme .content .contactList li {
       margin-right: 10px; } }
+@media screen and (min-width: 1030px) {
+  .imageSwitcher {
+    width: 550px; }
+
+  .screen .content {
+    width: 940px; } }
 @media screen and (min-width: 1080px) {
   nav {
     text-align: center; }
