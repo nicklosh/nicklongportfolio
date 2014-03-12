@@ -45,7 +45,7 @@ $(document).ready(function(){
 // include peanuts
 	function peanutsInc() {
 		var winWidth = $(window).width();
-		if (winWidth >= 900){
+		if (winWidth >= 980){
 			if ($("#peanutsComic iframe").length <= 0){
 				$("#peanutsComic").html('<iframe src="/peanuts/inPage.html" frameborder="0" scrolling="vertical" marginheight="0" marginwidth="0"></iframe>');
 			}
