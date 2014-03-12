@@ -1,9 +1,10 @@
+
 @mixin bodytext{
 	color: $white;
+	font-family: open_sansregular;
 	-webkit-font-smoothing: subpixel-antialiased;
-	font-family: "proxima-nova","Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
-	letter-spacing: .05em;
-	font-weight: 200;
+	/*letter-spacing: .03em;*/
+	/*font-size: 20px;*/
 
 }
 @mixin textshadow($textcolor){
